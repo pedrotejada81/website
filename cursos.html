@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Inscripción</title>
+  <link rel="stylesheet" href="css/style2.css" type="text/css"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+    <script>  
+        function vibrar(){            
+            navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+            if (navigator.vibrate) {
+              //  navigator.vibrate([500000]);
+            } 
+            else {alert('Su navegador no soporta la funcion de vibrar.')}            
+            }  
+        
+        function validacion (id) {
+            var element=document.getElementById(id);
+            if (element.checkValidity())
+                element.style.borderColor='green';
+            else
+                element.style.borderColor='red';
+            
+        }   
+        
+        function activar(){
+            var formulario = document.getElementById('form');
+            var boton = document.getElementById('save');
+            if (formulario.checkValidity()) {
+                boton.disabled=false; 
+                }
+            else {
+                boton.disabled=true; 
+            }
+                
+        }
+        </script>
+  
+</head>
+<body>
+
+<div class="container">
+  <h2>Inscríbete en tu Estándar!</h2>
+  <hr/>
+  <form class="form-horizontal" id="form" name="form" action="/action_page.php">
+     
+      <div class="form-group">      
+        <label class="control-label col-sm-2" for="foto">Foto</label>
+      <div class="col-sm-10">
+        <input class="form-control" accept="image/*" id="foto" type="file" capture/>
+      </div>
+    </div>
+      
+      <div class="form-group">      
+      <label class="control-label col-sm-2" for="curso">Curso</label>
+      <div class="col-sm-10">
+        <select id=curso name=curso>
+          <option value="ITIL">ITIL</option>
+          <option value="CMMI">CMMI</option>
+          <option value="PMBOK">PMBOK</option>
+          <option value="COBIT">COBIT</option>            
+        </select>
+      </div>
+    </div>
+    
+        <div class="form-group">
+      <label class="control-label col-sm-2" for="dni">DNI/NIE</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="dni" placeholder="Entre el DNI/NIE" name="dni" pattern="[A-Za-z0-9]{9}" title="Digite un DNI/NIE válido" maxlength="9" oninput="validacion('dni')" onkeyup="activar()" required>
+      </div>
+    </div>      
+      
+      <div class="form-group">
+      <label class="control-label col-sm-2" for="nombre">Name</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="nombre" placeholder="Entre nombre" name="nombre" pattern="[A-Za-z ]{2,20}" title="Digite 2 o más letras, sin números" minlength="2" maxlength="30" onkeyup="activar()" oninput="validacion('nombre')" required>
+      </div>
+    </div>
+          
+     <div class="form-group">
+      <label class="control-label col-sm-2" for="apellidos">Last Name</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="apellidos" placeholder="Entre apellidos" name="apellidos" pattern="[A-Za-z ]{2,40}" title="Digite 2 o más letras, sin números" minlength="2" maxlength="30" onkeyup="activar()" oninput="validacion('apellidos')" required>
+      </div>
+    </div>
+      
+       <div class="form-group">
+      <label class="control-label col-sm-2" for="fnacimiento">Birthdate</label>
+      <div class="col-sm-10">          
+        <input type="date" class="form-control" id="fnacimiento" placeholder="F.Nacimiento" name="fnacimiento" max="2008-12-31" oninput="validacion('fnacimiento')" onkeyup="activar()" required>
+      </div>
+    </div>
+      
+     <div class="form-group">
+      <label class="control-label col-sm-2" for="telefono">Phone</label>
+      <div class="col-sm-10">          
+        <input type="tel" class="form-control" id="telefono" placeholder="Entre teléfono" name="telefono" pattern="[+0-9]{9,12}" title="Digite un teléfono correcto" maxlength="12" oninput="validacion('telefono')" onkeyup="activar()" required>
+      </div>
+    </div>
+      
+     <div class="form-group">
+      <label class="control-label col-sm-2" for="email">E-mail</label>
+      <div class="col-sm-10">          
+        <input type="email" class="form-control" id="email" placeholder="Entre e-mail" name="email" title="Digite un email correcto" minlength="3" oninput="validacion('email')" onkeyup="activar()" required>
+      </div>
+    </div>
+      
+   
+      
+    <div class="row">  
+         <div class="col-sm-0"></div>
+       <div class="col-sm-10">        
+            <input href="#" type="submit" name="save" id="save" class="btn btn-info" onclick="vibrar()" disabled formaction="inscritos.html" value="Save">
+            &nbsp;&nbsp;
+            <a class="btn btn-info" href="inscritos.html" onclick="vibrar()">List</a>
+            <a class="btn btn-info" href="index.html">Back</a>
+      </div>
+    </div>
+  </form>
+</div>  
+
+    <script type="text/javascript" src="js/estudiantes.js"></script>
+</body>
+    <br><br><br><br><br><br><br><br><br><br>
+
+<footer style="text-align:center" > Copyright - Pedro Tejada de los Santos | Diseño de Aplicaciones Web | 2018 </footer>
+</html>

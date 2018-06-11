@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Inscritos</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3s.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style2.css" type="text/css"/>
+  <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery.dataTables.min.js"></script>
+    
+
+  
+   <script>  
+        function vibrar(){            
+            navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+            if (navigator.vibrate) {
+                navigator.vibrate([500000]);
+            } 
+            else {alert('Su navegador no soporta la funcion de vibrar.')}            
+            }  
+       
+       $(document).ready( function () {
+        $('#inscritos').DataTable();
+        } );
+    </script>
+    
+</head>
+<body>
+
+   
+    
+<div class="container">
+  <h2>Lista de inscritos</h2>
+  <p>Se muestran los estudiantes inscritos en los diferentes cursos</p>  
+  
+     <div class="row"> 
+         <div class="col-sm-11" > </div>
+          <div class="col-sm-1">
+            <a href="cursos.html" type="submit" id="back" class="btn btn-info">Back</a>
+          </div>
+    </div>
+    <br>
+    <div class="table-responsive"> 
+      <table class="display" id="inscritos">
+        <thead>
+          <tr>
+            <th>DNI</th>
+            <th>Curso</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Fecha Nacimiento</th>
+            <th>Teléfono</th>
+            <th>Email</th>
+            <th>Foto</th>
+          </tr>
+        </thead>
+        <tbody>       
+        </tbody>    
+
+      </table>
+    </div> <br>
+    
+   
+    
+   <div class="row"> 
+         <div class="col-sm-11" > </div>
+          <div class="col-sm-1">
+            <a href="cursos.html" type="submit" id="back" class="btn btn-info">Back</a>
+          </div>
+    </div>
+</div>
+    
+    
+    
+    <script type="text/javascript" src="js/listadoinscritos.js"></script>
+</body>
+  
+    <footer class="pie" style="text-align:center" > Copyright - Pedro Tejada de los Santos | Diseño de Aplicaciones Web | 2018 </footer>
+</html>
