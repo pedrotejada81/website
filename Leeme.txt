@@ -1,0 +1,29 @@
+DISEÑO WEB
+[DAW1718-PEDRO TEJADA]
+
+Link publicación: https://daw1718ptejada.000webhostapp.com/index.html
+Link GitHub: 	 https://github.com/pedrotejada81/website
+
+HTML5
+Utilizamos HTML5 para escribir todo el código de las páginas del proyecto web. 
+
+BOOTSTRAP
+Esta tecnología la usamos tanto en el index como en las demás páginas del sitio web.
+Es utilizada para que las páginas web sean responsive de manera que se pueden abrir tanto en pc, laptop, Tablet y móviles.
+
+CSS
+El css lo utilizamos en el index.html como  varias de las páginas, está en la carpeta css y lo integramos para dar formato y adornar el diseño.
+
+AJAX-JQUERY
+Se usó Ajax-Query para realizar una encuesta en el index.html. La utilización de esta tecnología se puede encontrar primero en una función llamada getVote del index.html, esta función llama al archivo encuesta.php para que guarde los datos en un archivo llamado result.txt, ambos ficheros se pueden encontrar en la carpeta raíz del proyecto. 
+
+LOCAL STORAGE
+Utilizamos el local Storage del navegador para almacenar la información del registro de los estudiantes que se inscriben en un curso de los estándares. 
+
+
+
+
+
+
+2
+
